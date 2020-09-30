@@ -1,0 +1,47 @@
+
+$this: ".ranking";
+
+#{$this} {
+    &__legend {
+        color: lighten($colorBlue, 40%);
+    }
+
+    .aph.form {
+        &__control {
+            color           : $colorWhite !important;
+            box-shadow      : none !important;
+            background-color: transparent !important;
+
+            text-align: center !important;
+        }
+    }
+
+    .aph.table {
+        th {
+            color: $colorWhite !important;
+
+            &.text-center {
+                text-align: center;
+            }
+        }
+
+        &--hover {
+            tbody {
+                tr {
+                    &:hover {
+                        background: darken($colorBlue, 12%) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @include xs {
+        .aph.table {
+            th, td {
+                padding-top   : 4px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}

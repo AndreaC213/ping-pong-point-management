@@ -1,0 +1,72 @@
+
+$this: ".matches";
+
+#{$this} {
+    &__match {
+        padding: 10px 10px 5px;
+        margin : 5px 0 0;
+        border-top: 1px solid darken($colorBlue, 5%);
+
+        &__points-col {
+            padding: 0 !important;
+
+            width    : 30px;
+            max-width: 30px;
+        }
+
+        &__vs {
+            padding: 0 !important;
+
+            font-weight: 100;
+
+            width    : 10px;
+            max-width: 10px;
+        }
+
+        &__team {
+            padding-top: 7px;
+        }
+
+        &__team {
+            font-size  : 12px;
+            line-height: 15px;
+            width: 40%;
+
+            &.left {
+                text-align: right;
+            }
+
+            &.right {
+                text-align: left;
+            }
+
+            &__points {
+                font-size  : 12px;
+                line-height: 10px;
+
+                display: inline-block;
+                margin : 0;
+                padding: 7px 0;
+                min-width: 25px;
+
+                background: darken($colorBlue, 15%);
+                border-radius: 4px;
+            }
+        }
+
+        &__duration {
+            font-size  : 10px;
+            line-height: 10px;
+
+            &__label {
+                display: inline-block;
+                margin : 0 3px;
+                padding: 3px 5px;
+                color     : darken($colorBlue, 20%);
+                background: darken($colorBlue, 5%);
+                border-radius: 4px;
+                opacity: 1;
+            }
+        }
+    }
+}

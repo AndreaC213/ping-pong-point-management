@@ -1,0 +1,61 @@
+
+$this: ".aph.drawer";
+$drawerLg: 320px;
+
+#{$this} {
+    top: 60px;
+    z-index: 1050;
+    border-right: 0;
+
+    color     : $colorWhite;
+    background: darken($colorBlue, 10%);
+
+    &.lg {
+        left : -#{$drawerLg};
+        width: $drawerLg;
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    &.active {
+        box-shadow: none !important;
+    }
+
+    &.right {
+        right     : -230px;
+        left      : auto;
+        transition: right .2s linear;
+        animation : none;
+
+        &.lg {
+            right: -#{$drawerLg};
+            left : auto;
+        }
+
+        &.active {
+            right: 0;
+        }
+
+        .aph.form__control {
+            text-align: center;
+        }
+    }
+
+    @include xs {
+        &.left-xs {
+            right     : auto;
+            left      : -230px;
+            transition: left .2s linear;
+
+            &.lg {
+                left: -#{$drawerLg};
+            }
+
+            &.active {
+                left: 0;
+            }
+        }
+    }
+}

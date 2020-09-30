@@ -1,0 +1,68 @@
+
+$this: ".aph.form";
+
+#{$this} {
+    &__label,
+    &__control {
+        color: rgba($colorWhite, 0.75);
+    }
+
+    &__control {
+        &[type="text"],
+        &[type="number"] {
+            color        : $colorWhite;
+            background   : transparent;
+            box-shadow   : none;
+            border-radius: 0;
+            border-bottom: 4px solid rgba($colorWhite, 0.25);
+
+            &:hover,
+            &:focus,
+            &:active {
+                box-shadow: none;
+                border-bottom-color: $colorWhite;
+            }
+
+            &:disabled {
+                color     : rgba($colorWhite, 0.5);
+                background: transparent;
+
+                border-bottom-color: transparent;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+
+        &-with-icon {
+            #{$this} {
+                &__control {
+                    padding-right: 0 !important;
+                    padding-left : 0 !important;
+                }
+            }
+        }
+    }
+
+    @include xs {
+        &__control {
+            border-top  : none !important;
+            border-right: none !important;
+            border-left : none !important;
+
+            border-bottom-color: rgba($colorWhite, 0.5) !important;
+
+            &-with-icon {
+                &__button {
+                    top      : -40px !important;
+                    right    : auto !important;
+                    left     : 50% !important;
+                    transform: translateX(-50%) !important;
+                }
+            }
+        }
+    }
+}
